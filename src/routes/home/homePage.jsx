@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Home from "../components/home/Home";
+import Home from "../../components/home/Home";
 
 const HomePage = () => {
   const catagories = [
