@@ -1,14 +1,17 @@
 import { Outlet, Link } from "react-router-dom";
+import { ReactComponent as ShopLogo } from "../../assets/dsquared2-seeklogo.com.svg";
+import "./navigation.scss";
+
 const Navigation = () => {
   return (
     <>
       <div className="navigation">
         <Link className="logo-container" to="/">
-          <div>Logo</div>
+          <ShopLogo className="logo" />
         </Link>
-        <div className="links-container">
-          <Link className="nav-link" to="/test">
-            Test
+        <div className="nav-links-container">
+          <Link className="nav-link" to="/shop">
+            Shop
           </Link>
         </div>
       </div>
