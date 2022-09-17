@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./routes/home/HomePage";
-import Navigation from "./routes/navigation/Navigation";
+import HomePage from "./routes/home/homePage";
+import Navigation from "./routes/navigation/navigation";
 import SignIn from "./routes/signIn/SignIn";
 
 const Shop = () => <h1>I'm in shop page </h1>;
