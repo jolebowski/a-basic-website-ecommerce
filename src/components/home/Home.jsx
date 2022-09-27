@@ -1,4 +1,4 @@
-import Category from "../catergory/Category";
+import Category from "../category/Category";
 import "./home.scss";
 
 const Home = ({ catagories }) => {

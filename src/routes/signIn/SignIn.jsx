@@ -3,7 +3,8 @@ import {
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
 
-import SignUpForm from "../../components/sign-up-form/SignUpForm";
+import SignUpForm from "../../components/sign-up-form/Sign-up-form";
+import Button from "../../components/button/Button";
 
 const signIn = () => {
   const logSignInWithGoogle = async () => {
@@ -14,7 +15,9 @@ const signIn = () => {
   return (
     <div data-ux_mode="redirect">
       <h1>I'm Signin</h1>
-      <button onClick={logSignInWithGoogle}>Login with google</button>
+      <Button buttonType="google" onClick={logSignInWithGoogle}>
+        Login with google
+      </Button>
       <SignUpForm />
     </div>
   );
