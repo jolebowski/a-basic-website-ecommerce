@@ -39,7 +39,7 @@ const SignUpForm = () => {
       resetForm();
     } catch (e) {
       if (e.code === "auth/email-already-in-use") {
-        alert("Thre is a email exists already");
+        alert("There is a email exists already");
       } else {
         console.error("user conection encountered an error", e);
       }
@@ -91,7 +91,9 @@ const SignUpForm = () => {
           value={confirmPassword}
           required
         />
-        <Button type="submit">Sign up</Button>
+        <div>
+          <Button type="submit">Sign up</Button>
+        </div>
       </form>
     </div>
   );

@@ -1,14 +1,12 @@
-.sign-up-container {
+.sign-in-container {
   display: flex;
   flex-direction: column;
-  //width: 380px;
   align-items: center;
   text-align: center;
   h2 {
     margin: 10px 0;
   }
-  form,
-  button {
-    width: 410px;
+  .buttons-login {
+    display: flex;
   }
 }

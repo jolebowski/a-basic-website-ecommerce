@@ -10,11 +10,17 @@ const Navigation = () => {
           <ShopLogo className="logo" />
         </Link>
         <div className="nav-links-container">
+          <Link className="nav-link" to="/">
+            Home
+          </Link>
           <Link className="nav-link" to="/shop">
             Shop
           </Link>
           <Link className="nav-link" to="/signIn">
             Sign In
+          </Link>
+          <Link className="nav-link" to="/SignUp">
+            Sign Up
           </Link>
         </div>
       </div>
