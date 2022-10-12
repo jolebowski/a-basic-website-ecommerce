@@ -2,14 +2,18 @@ import { useContext } from "react";
 
 import { Outlet, Link } from "react-router-dom";
 import { ReactComponent as ShopLogo } from "../../assets/dsquared2-seeklogo.com.svg";
-import "./navigation.scss";
+import CartDropDown from "../../components/cart-dropdown/Cart-dropdown";
+import CartIcon from "../../components/cart-icon/Cart-icon";
 
 import { UserContext } from "../../contexts/user.context";
+import { CartContext } from "../../contexts/cart.context";
 
 import { signOutUser } from "../../utils/firebase/firebase.utils";
+import "./navigation.scss";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
+  const { isCartOpen } = useContext(CartContext);
 
   return (
     <>
@@ -36,7 +40,9 @@ const Navigation = () => {
           <Link className="nav-link" to="/SignUp">
             Sign Up
           </Link>
+          <CartIcon />
         </div>
+        {isCartOpen && <CartDropDown />}
       </div>
       <Outlet />
     </>
