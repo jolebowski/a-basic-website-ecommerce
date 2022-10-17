@@ -37,7 +37,7 @@ const Navigation = () => {
               Sign In
             </Link>
           )}
-          <Link className="nav-link" to="/SignUp">
+          <Link className="nav-link" to="/signUp">
             Sign Up
           </Link>
           <CartIcon />
