@@ -5,7 +5,7 @@ import Checkout from "./routes/checkout/checkout";
 import HomePage from "./routes/home/homePage";
 import Navigation from "./routes/navigation/navigation";
 import Shop from "./routes/shop/shop";
-import SignIn from "./routes/signIn/signIn";
+// import SignIn from "./routes/signIn/signIn";
 import SignUp from "./routes/signUp/signUp";
 import {
   onAuthStateChangedListnner,
@@ -32,7 +32,7 @@ const App = () => {
       <Route path="/" element={<Navigation />}>
         <Route index element={<HomePage />} />
         <Route path="shop/*" element={<Shop />} />
-        <Route path="signIn" element={<SignIn />} />
+        {/* <Route path="signIn" element={<SignIn />} /> */}
         <Route path="signUp" element={<SignUp />} />
         <Route path="checkout" element={<Checkout />} />
       </Route>
