@@ -7,24 +7,13 @@ import Navigation from "./routes/navigation/navigation";
 import Shop from "./routes/shop/shop";
 import SignIn from "./routes/signIn/signIn";
 import SignUp from "./routes/signUp/signUp";
-import {
-  onAuthStateChangedListnner,
-  createUserDocumentFromAuth,
-} from "./utils/firebase/firebase.utils";
+import { checkUserSession } from "./redux/user/actions/user.action";
 
-import { setCurrentUser } from "./redux/user/actions/user.action";
 const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const unsubcribe = onAuthStateChangedListnner((user) => {
-      //console.log(user);
-      if (user) {
-        createUserDocumentFromAuth(user);
-      }
-      dispatch(setCurrentUser(user));
-    });
-    return unsubcribe;
+    dispatch(checkUserSession());
   }, []);
 
   return (
