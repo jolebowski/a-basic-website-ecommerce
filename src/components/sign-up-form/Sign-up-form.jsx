@@ -7,7 +7,7 @@ import {
 import FormInput from "../form-imput/Form-input";
 import Button from "../button/Button";
 
-import "./sign-up-form.scss";
+import { SignUpContainer, FormSignUp } from "./sign-up-form.styles";
 
 const defaultFormFileds = {
   displayName: "",
@@ -52,12 +52,12 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className="sign-up-container">
+    <SignUpContainer>
       <div>
         <h2>Don't have an account?</h2>
         <span>Sign up with your email and password</span>
       </div>
-      <form onSubmit={handleSubmit}>
+      <FormSignUp onSubmit={handleSubmit}>
         <FormInput
           label="Display name"
           type="text"
@@ -94,8 +94,8 @@ const SignUpForm = () => {
         <div>
           <Button type="submit">Sign up</Button>
         </div>
-      </form>
-    </div>
+      </FormSignUp>
+    </SignUpContainer>
   );
 };
 
